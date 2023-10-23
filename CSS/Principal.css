@@ -1,0 +1,135 @@
+body{
+    display: flex;
+}
+
+
+/* EXERCICIO 1 */
+.botao-destaque {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    margin: 100px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .botao-destaque:hover {
+    background-color: #e74c3c; /* Cor de fundo diferente no hover */
+    transform: scale(1.1); /* Aumenta ligeiramente de tamanho */
+  }
+
+
+/* EXERCICIO 2 */
+.carta {
+    width: 200px;
+    height: 300px;
+    margin-top: 100px;
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    line-height: 300px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 1s;
+  }
+  
+  .carta:hover {
+    transform: rotateY(180deg); /* Gire 180 graus no eixo Y no hover */
+  }
+  
+
+  /* EXERCICIO 3 */
+  .relogio {
+    width: 200px;
+    height: 200px;
+    background-color:bisque;
+    border-radius: 50%;
+    position: relative;
+    margin: 100px ;
+    animation: rotacao 60s linear infinite; /* Animação para o ponteiro de segundos */
+  }
+  
+  .ponteiro-segundos {
+    width: 2px;
+    height: 70px;
+    background-color: #e74c3c;
+    position: absolute;
+    top: 17%;
+    left: 48%;
+    transform-origin: 100% 100%; /* Define o ponto de rotação no centro inferior */
+    animation: ponteiroSegundosAnimacao 60s linear infinite; /* Animação para o ponteiro de segundos */
+  }
+
+  .ponteiro-minutos {
+    width: 2px;
+    height: 80px;
+    background-color: black;
+    position: absolute;
+    top: 12%;
+    left: 48%;
+    transform-origin: 100% 100%; /* Define o ponto de rotação no centro inferior */
+    animation: ponteiroSegundosAnimacao 3600s linear infinite; /* Animação para o ponteiro de segundos */
+  }
+  
+  .ponteiro-horas {
+    width: 2px;
+    height: 60px;
+    background-color: blueviolet;
+    position: absolute;
+    top: 22%;
+    left: 48%;
+    transform-origin: 100% 100%; /* Define o ponto de rotação no centro inferior */
+    animation: ponteiroSegundosAnimacao 86400s linear infinite; /* Animação para o ponteiro de segundos */
+  }
+  @keyframes ponteiroSegundosAnimacao {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+    /* EXERCICIO 4 */
+    .div-clicavel {
+        width: 100px;
+        height: 100px;
+        background-color: #3498db;
+        margin-top: 100px;
+        margin: 100px;
+        transition: transform 0.3s;
+        cursor: pointer;
+      }
+      
+      .div-clicavel:active {
+        transform: scale(1.2); /* Aumenta o tamanho em 20% quando clicado */
+      }
+      
+
+    /* EXERCICIO 5 */
+      .formulario {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: 0 auto;
+      }
+      
+      .campo {
+        width: 100%;
+        padding: 10px;
+        margin:100px;
+        margin-top: 100px;
+        margin-bottom: 10px;
+        border: 2px solid #3498db;
+        border-radius: 5px;
+        transition: transform 0.3s, background-color 0.3s;
+      }
+      
+      .campo:focus {
+        transform: scale(1.05); /* Aumenta levemente de tamanho */
+        background-color: #e74c3c; /* Muda de cor quando selecionado */
+      }
+      
